@@ -1,6 +1,6 @@
 {
   "name": "@sosukesuzuki/rollup-plugin-bundle-size",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./lib/rollup-plugin-bundle-size.cjs.js",
   "module": "./lib/rollup-plugin-bundle-size.esm.js",
   "files": [
