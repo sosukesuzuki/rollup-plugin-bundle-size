@@ -21,3 +21,9 @@ export default {
   plugins: [bundleSize()],
 };
 ```
+
+## Release
+
+```
+npm run release -- --release=patch
+```
