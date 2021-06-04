@@ -11,21 +11,18 @@ beforeEach(() => {
   consoleLogMock.mockClear();
 });
 
-function testFixtures(dir, testName, pluginOptions) {
+function testFixtures(dir, testName) {
   test(testName, async () => {
     const options = {
       input: `fixtures/${dir}/main.js`,
-      plugins: [bundleSize(pluginOptions)],
+      plugins: [bundleSize()],
     };
     const build = await rollup(options);
     await build.generate({ format: "cjs" });
     expect(consoleLogMock.mock.calls.length).toBe(1);
-    console.warn(consoleLogMock.mock.calls);
   });
 }
 
 for (const dir of fs.readdirSync(`./fixtures`)) {
-  testFixtures(dir, `${dir} with no options`);
-  testFixtures(dir, `${dir} with gzipped option true`, { gzipped: true });
-  testFixtures(dir, `${dir} with gzipped option false`, { gzipped: false });
+  testFixtures(dir, `${dir}`);
 }

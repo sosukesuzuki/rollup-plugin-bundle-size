@@ -5,6 +5,7 @@
   "module": "./lib/rollup-plugin-bundle-size.esm.js",
   "files": [
     "lib",
+    "index.d.ts",
     "LICENSE"
   ],
   "types": "./index.d.ts",
@@ -18,11 +19,13 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
     "dirname-filename-esm": "^1.1.1",
     "jest": "^27.0.3",
     "prettier": "2.3.0",
     "rollup": "^2.50.5",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.3.2"
   },
   "peerDependencies": {
     "rollup": "^2.50.5"
