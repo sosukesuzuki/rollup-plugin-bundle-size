@@ -1,5 +1,7 @@
 import minimist from "minimist";
 import execa from "execa";
+import fs from "fs/promises";
+import path from "path";
 
 const { release } = minimist(process.argv.slice(2));
 
